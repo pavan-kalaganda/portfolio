@@ -1,0 +1,37 @@
+{
+  "name": "pavan-kalaganda-portfolio",
+  "version": "1.0.0",
+  "description": "Modern personal portfolio website for GitHub Pages",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx live-server --port=3000 --open=/",
+    "build": "npm run validate && npm run copy-assets",
+    "validate": "npx html-validate index.html",
+    "copy-assets": "mkdir -p dist && cp -r index.html css js assets dist/",
+    "serve": "npx http-server dist -p 8080",
+    "deploy": "npm run build && echo 'Ready for GitHub Pages deployment'"
+  },
+  "keywords": [
+    "portfolio",
+    "github-pages",
+    "static-site",
+    "data-science",
+    "machine-learning",
+    "resume"
+  ],
+  "author": "Pavan Kalaganda",
+  "license": "MIT",
+  "devDependencies": {
+    "html-validate": "^8.0.0",
+    "live-server": "^1.2.2",
+    "http-server": "^14.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pavan-kalaganda/portfolio.git"
+  },
+  "homepage": "https://pavan-kalaganda.github.io/portfolio/",
+  "bugs": {
+    "url": "https://github.com/pavan-kalaganda/portfolio/issues"
+  }
+}

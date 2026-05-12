@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO Meta Tags -->
+    <title>Pavan Kalaganda | Data Science & Engineering Student | ML & NLP Portfolio</title>
+    <meta name="description" content="Portfolio of Pavan Kalaganda, B.Tech Data Science & Engineering student at IIT Palakkad. Specializing in Machine Learning, NLP, LLMs, and Data Engineering.">
+    <meta name="keywords" content="Pavan Kalaganda, Data Science, Machine Learning, NLP, LLM, IIT Palakkad, Python, PyTorch, Portfolio">
+    <meta name="author" content="Pavan Kalaganda">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pavan-kalaganda.github.io/portfolio/">
+    <meta property="og:title" content="Pavan Kalaganda | Data Science & ML Portfolio">
+    <meta property="og:description" content="B.Tech Data Science student at IIT Palakkad. Building intelligent systems with ML, NLP, and LLMs.">
+    <meta property="og:image" content="./assets/og-image.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://pavan-kalaganda.github.io/portfolio/">
+    <meta property="twitter:title" content="Pavan Kalaganda | Data Science & ML Portfolio">
+    <meta property="twitter:description" content="B.Tech Data Science student at IIT Palakkad. Building intelligent systems with ML, NLP, and LLMs.">
+    <meta property="twitter:image" content="./assets/og-image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>PK</text></svg>">
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://api.github.com">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <!-- Theme initialization (prevents flash) -->
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="#" class="nav-logo" aria-label="Home">
+                <span class="logo-bracket">&lt;</span>PK<span class="logo-bracket">/&gt;</span>
+            </a>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+
+            <ul class="nav-menu" id="navMenu" role="menubar">
+                <li role="none"><a href="#about" class="nav-link" role="menuitem">About</a></li>
+                <li role="none"><a href="#skills" class="nav-link" role="menuitem">Skills</a></li>
+                <li role="none"><a href="#experience" class="nav-link" role="menuitem">Experience</a></li>
+                <li role="none"><a href="#projects" class="nav-link" role="menuitem">Projects</a></li>
+                <li role="none"><a href="#education" class="nav-link" role="menuitem">Education</a></li>
+                <li role="none"><a href="#github" class="nav-link" role="menuitem">GitHub</a></li>
+                <li role="none"><a href="#contact" class="nav-link" role="menuitem">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+                    <i class="fas fa-sun" aria-hidden="true"></i>
+                    <i class="fas fa-moon" aria-hidden="true"></i>
+                </button>
+                <a href="./assets/resume.pdf" class="btn btn-sm btn-primary" download aria-label="Download resume PDF">
+                    <i class="fas fa-download" aria-hidden="true"></i> CV
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" id="hero" aria-label="Introduction">
+            <div class="hero-background" aria-hidden="true">
+                <canvas id="heroCanvas"></canvas>
+                <div class="hero-gradient-overlay"></div>
+            </div>
+            <div class="hero-content">
+                <div class="hero-badge" data-animate="fade-up">
+                    <i class="fas fa-circle-check" aria-hidden="true"></i>
+                    <span>B.Tech Data Science & Engineering</span>
+                </div>
+                <h1 class="hero-title" data-animate="fade-up" data-delay="100">
+                    Hi, I'm <span class="text-gradient">Pavan Kalaganda</span>
+                </h1>
+                <p class="hero-subtitle" data-animate="fade-up" data-delay="200">
+                    <span id="typingText"></span><span class="typing-cursor">|</span>
+                </p>
+                <p class="hero-description" data-animate="fade-up" data-delay="300">
+                    Building intelligent systems at the intersection of Machine Learning, Natural Language Processing, 
+                    and Large Language Models. Passionate about turning complex data into actionable insights.
+                </p>
+                <div class="hero-actions" data-animate="fade-up" data-delay="400">
+                    <a href="#projects" class="btn btn-primary btn-lg">
+                        <i class="fas fa-rocket" aria-hidden="true"></i> View Projects
+                    </a>
+                    <a href="#contact" class="btn btn-outline btn-lg">
+                        <i class="fas fa-envelope" aria-hidden="true"></i> Get in Touch
+                    </a>
+                </div>
+                <div class="hero-stats" data-animate="fade-up" data-delay="500">
+                    <div class="stat-item">
+                        <span class="stat-number">4+</span>
+                        <span class="stat-label">ML Projects</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Technologies</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">R² 0.98</span>
+                        <span class="stat-label">Best Model Score</span>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator" aria-hidden="true">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <span>Scroll to explore</span>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section about" id="about" aria-labelledby="about-heading">
+            <div class="container">
+                <div class="section-header" data-animate="fade-up">
+                    <span class="section-tag">01. About Me</span>
+                    <h2 id="about-heading" class="section-title">Who I Am</h2>
+                </div>
+                <div class="about-grid">
+                    <div class="about-content" data-animate="fade-right">
+                        <div class="about-text">
+                            <p>
+                                I'm a <strong>Data Science and Engineering student</strong> at the Indian Institute of Technology, Palakkad, 
+                                with a deep fascination for how machines understand language and patterns. My academic journey has equipped me 
+                                with a strong foundation in statistical modeling, algorithm design, and system architecture.
+                            </p>
+                            <p>
+                                My expertise spans the entire ML pipeline — from <strong>ETL and feature engineering</strong> to deploying 
+                                <strong>Transformer-based models</strong> and <strong>Retrieval-Augmented Generation (RAG)</strong> systems. 
+                                I've built production-ready search engines, predictive analytics dashboards, and classification models 
+                                that solve real-world problems.
+                            </p>
+                            <p>
+                                When I'm not training models, you'll find me competing in <strong>powerlifting</strong> at the national level 
+                                — a discipline that has taught me the value of consistency, progressive overload, and strategic planning, 
+                                principles I apply equally to my technical work.
+                            </p>
+                        </div>
+                        <div class="about-highlights">
+                            <div class="highlight-card">
+                                <i class="fas fa-brain" aria-hidden="true"></i>
+                                <h3>ML & Deep Learning</h3>
+                                <p>PyTorch, Scikit-learn, Transformers, Time-Series Forecasting</p>
+                            </div>
+                            <div class="highlight-card">
+                                <i class="fas fa-language" aria-hidden="true"></i>
+                                <h3>NLP & LLMs</h3>
+                                <p>BERT, RAG, BM25, Learning-to-Rank, Search Evaluation</p>
+                            </div>
+                            <div class="highlight-card">
+                                <i class="fas fa-database" aria-hidden="true"></i>
+                                <h3>Data Engineering</h3>
+                                <p>ETL Pipelines, Elasticsearch, PostgreSQL, MongoDB</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-visual" data-animate="fade-left">
+                        <div class="code-window">
+                            <div class="code-header">
+                                <div class="code-dot red"></div>
+                                <div class="code-dot yellow"></div>
+                                <div class="code-dot green"></div>
+                                <span class="code-filename">pavan.py</span>
+                            </div>
+                            <pre class="code-body"><code><span class="code-keyword">class</span> <span class="code-class">PavanKalaganda</span>:
+    <span class="code-keyword">def</span> <span class="code-function">__init__</span>(self):
+        self.name = <span class="code-string">"Pavan Kalaganda"</span>
+        self.role = <span class="code-string">"ML Engineer & Data Scientist"</span>
+        self.education = <span class="code-string">"IIT Palakkad"</span>
+        self.languages = [<span class="code-string">"Python"</span>, <span class="code-string">"SQL"</span>]
+        self.interests = [
+            <span class="code-string">"NLP"</span>,
+            <span class="code-string">"LLMs"</span>,
+            <span class="code-string">"Information Retrieval"</span>,
+            <span class="code-string">"Powerlifting"</span>
+        ]
+
+    <span class="code-keyword">def</span> <span class="code-function">solve</span>(self, problem):
+        <span class="code-keyword">return</span> self.analyze(problem)                + self.model(problem)                + self.deploy(problem)</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="section skills" id="skills" aria-labelledby="skills-heading">
+            <div class="container">
+                <div class="section-header" data-animate="fade-up">
+                    <span class="section-tag">02. Skills & Technologies</span>
+                    <h2 id="skills-heading" class="section-title">My Technical Stack</h2>
+                    <p class="section-subtitle">Tools and technologies I use to build intelligent systems</p>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- Programming Languages -->
+                    <div class="skill-category" data-animate="fade-up">
+                        <div class="skill-category-header">
+                            <div class="skill-icon-wrapper">
+                                <i class="fas fa-code" aria-hidden="true"></i>
+                            </div>
+                            <h3>Languages</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <i class="devicon-python-plain" aria-hidden="true"></i>
+                                <span>Python</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="devicon-postgresql-plain" aria-hidden="true"></i>
+                                <span>SQL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ML & Deep Learning -->
+                    <div class="skill-category" data-animate="fade-up" data-delay="100">
+                        <div class="skill-category-header">
+                            <div class="skill-icon-wrapper">
+                                <i class="fas fa-brain" aria-hidden="true"></i>
+                            </div>
+                            <h3>ML & Deep Learning</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <i class="devicon-pytorch-original" aria-hidden="true"></i>
+                                <span>PyTorch</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-robot" aria-hidden="true"></i>
+                                <span>Scikit-learn</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-transformer" aria-hidden="true"></i>
+                                <span>Transformers</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-chart-line" aria-hidden="true"></i>
+                                <span>Ridge Regression</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-project-diagram" aria-hidden="true"></i>
+                                <span>PCA</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-object-group" aria-hidden="true"></i>
+                                <span>K-Means</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-clock" aria-hidden="true"></i>
+                                <span>Time-Series</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+                                <span>Anomaly Detection</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- NLP & LLMs -->
+                    <div class="skill-category" data-animate="fade-up" data-delay="200">
+                        <div class="skill-category-header">
+                            <div class="skill-icon-wrapper">
+                                <i class="fas fa-language" aria-hidden="true"></i>
+                            </div>
+                            <h3>NLP & LLMs</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <i class="fas fa-font" aria-hidden="true"></i>
+                                <span>Text Processing</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-tags" aria-hidden="true"></i>
+                                <span>BIO Tagging</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-search" aria-hidden="true"></i>
+                                <span>Embedding Search</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-list-ol" aria-hidden="true"></i>
+                                <span>BM25</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
+                                <span>Learning-to-Rank</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-database" aria-hidden="true"></i>
+                                <span>RAG</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-robot" aria-hidden="true"></i>
+                                <span>LLM Integration</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-chart-bar" aria-hidden="true"></i>
+                                <span>NDCG / MRR</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Data Engineering -->
+                    <div class="skill-category" data-animate="fade-up" data-delay="300">
+                        <div class="skill-category-header">
+                            <div class="skill-icon-wrapper">
+                                <i class="fas fa-server" aria-hidden="true"></i>
+                            </div>
+                            <h3>Data Engineering</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <i class="fas fa-stream" aria-hidden="true"></i>
+                                <span>ETL Pipelines</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-wrench" aria-hidden="true"></i>
+                                <span>Feature Engineering</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-broom" aria-hidden="true"></i>
+                                <span>Data Cleaning</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-search" aria-hidden="true"></i>
+                                <span>Elasticsearch</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-plug" aria-hidden="true"></i>
+                                <span>API Integration</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Databases -->
+                    <div class="skill-category" data-animate="fade-up" data-delay="400">
+                        <div class="skill-category-header">
+                            <div class="skill-icon-wrapper">
+                                <i class="fas fa-database" aria-hidden="true"></i>
+                            </div>
+                            <h3>Databases</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <i class="devicon-postgresql-plain" aria-hidden="true"></i>
+                                <span>PostgreSQL</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="devicon-mongodb-plain" aria-hidden="true"></i>
+                                <span>MongoDB</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-tachometer-alt" aria-hidden="true"></i>
+                                <span>Query Optimization</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-index" aria-hidden="true"></i>
+                                <span>Indexing</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-window-maximize" aria-hidden="true"></i>
+                                <span>Window Functions</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Visualization & Tools -->
+                    <div class="skill-category" data-animate="fade-up" data-delay="500">
+                        <div class="skill-category-header">
+                            <div class="skill-icon-wrapper">
+                                <i class="fas fa-tools" aria-hidden="true"></i>
+                            </div>
+                            <h3>Visualization & Tools</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <i class="fas fa-chart-pie" aria-hidden="true"></i>
+                                <span>Plotly</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-chart-area" aria-hidden="true"></i>
+                                <span>Matplotlib</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-chart-bar" aria-hidden="true"></i>
+                                <span>Seaborn</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-desktop" aria-hidden="true"></i>
+                                <span>Streamlit</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-file-powerpoint" aria-hidden="true"></i>
+                                <span>Power BI</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="devicon-git-plain" aria-hidden="true"></i>
+                                <span>Git/GitHub</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="devicon-linux-plain" aria-hidden="true"></i>
+                                <span>Linux</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-book" aria-hidden="true"></i>
+                                <span>Jupyter</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Timeline Section -->
+        <section class="section experience" id="experience" aria-labelledby="experience-heading">
+            <div class="container">
+                <div class="section-header" data-animate="fade-up">
+                    <span class="section-tag">03. Experience & Leadership</span>
+                    <h2 id="experience-heading" class="section-title">Career Progression</h2>
+                    <p class="section-subtitle">My journey through academics, projects, and leadership</p>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-line" aria-hidden="true"></div>
+
+                    <div class="timeline-item" data-animate="fade-up">
+                        <div class="timeline-marker" aria-hidden="true">
+                            <div class="timeline-dot"></div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-card">
+                                <div class="timeline-date">
+                                    <span class="date-badge">Aug 2023 – Present</span>
+                                </div>
+                                <h3 class="timeline-title">B.Tech in Data Science and Engineering</h3>
+                                <p class="timeline-org">Indian Institute of Technology, Palakkad</p>
+                                <p class="timeline-desc">
+                                    Pursuing undergraduate studies with focus on Machine Learning, Deep Learning, NLP, 
+                                    and Information Retrieval. Relevant coursework includes AI, Probability & Statistics, 
+                                    Big Data, Database Management Systems, and Data Structures & Algorithms.
+                                </p>
+                                <div class="timeline-tags">
+                                    <span class="tag">CGPA: 6.0/10</span>
+                                    <span class="tag">Expected May 2027</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-animate="fade-up">
+                        <div class="timeline-marker" aria-hidden="true">
+                            <div class="timeline-dot"></div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-card">
+                                <div class="timeline-date">
+                                    <span class="date-badge">2024 – Present</span>
+                                </div>
+                                <h3 class="timeline-title">Machine Learning & NLP Projects</h3>
+                                <p class="timeline-org">Independent & Academic Research</p>
+                                <p class="timeline-desc">
+                                    Developed end-to-end ML systems including stock market prediction pipelines (R² = 0.98), 
+                                    F1 analytics dashboards with Streamlit, numerical search engines over Wikipedia using 
+                                    Elasticsearch and BERT, and genre classification models.
+                                </p>
+                                <div class="timeline-tags">
+                                    <span class="tag">PyTorch</span>
+                                    <span class="tag">Elasticsearch</span>
+                                    <span class="tag">RAG</span>
+                                    <span class="tag">Streamlit</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-animate="fade-up">
+                        <div class="timeline-marker" aria-hidden="true">
+                            <div class="timeline-dot"></div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-card">
+                                <div class="timeline-date">
+                                    <span class="date-badge">2026</span>
+                                </div>
+                                <h3 class="timeline-title">Captain, Powerlifting Team</h3>
+                                <p class="timeline-org">IIT Palakkad</p>
+                                <p class="timeline-desc">
+                                    Led the IIT Palakkad Powerlifting Team to a <strong>Gold Medal</strong> at the College 
+                                    General Championship 2026. Managed team training schedules, competition strategy, 
+                                    and athlete development.
+                                </p>
+                                <div class="timeline-tags">
+                                    <span class="tag">Leadership</span>
+                                    <span class="tag">Team Management</span>
+                                    <span class="tag">Gold Medal</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-animate="fade-up">
+                        <div class="timeline-marker" aria-hidden="true">
+                            <div class="timeline-dot"></div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-card">
+                                <div class="timeline-date">
+                                    <span class="date-badge">2025</span>
+                                </div>
+                                <h3 class="timeline-title">Inter-IIT Weightlifting Representative</h3>
+                                <p class="timeline-org">IIT Palakkad</p>
+                                <p class="timeline-desc">
+                                    Selected to represent IIT Palakkad at the <strong>Inter-IIT Weightlifting Competition</strong>, 
+                                    competing at a national-level platform against other IITs. Demonstrated exceptional 
+                                    physical discipline and competitive spirit.
+                                </p>
+                                <div class="timeline-tags">
+                                    <span class="tag">National Level</span>
+                                    <span class="tag">Athletics</span>
+                                    <span class="tag">Discipline</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="section projects" id="projects" aria-labelledby="projects-heading">
+            <div class="container">
+                <div class="section-header" data-animate="fade-up">
+                    <span class="section-tag">04. Featured Projects</span>
+                    <h2 id="projects-heading" class="section-title">Project Portfolio</h2>
+                    <p class="section-subtitle">A selection of my most impactful technical work</p>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1: Nifty 50 -->
+                    <article class="project-card" data-animate="fade-up">
+                        <div class="project-header">
+                            <div class="project-folder">
+                                <i class="fas fa-folder-open" aria-hidden="true"></i>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/pavan-kalaganda" class="project-link" aria-label="View on GitHub" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-github" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" class="project-link" aria-label="View live demo" target="_blank" rel="noopener noreferrer">
+                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Nifty 50 Stock Market Prediction</h3>
+                        <p class="project-desc">
+                            Engineered time-series features and built an end-to-end ML pipeline to forecast next-day 
+                            Nifty 50 stock prices. Applied PCA and K-Means clustering to segment market regimes 
+                            and surface trend patterns.
+                        </p>
+                        <div class="project-metrics">
+                            <span class="metric"><i class="fas fa-bullseye" aria-hidden="true"></i> R² = 0.98</span>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Scikit-learn</span>
+                            <span class="tech-tag">Ridge Regression</span>
+                            <span class="tech-tag">PCA</span>
+                            <span class="tech-tag">K-Means</span>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: F1 Dashboard -->
+                    <article class="project-card" data-animate="fade-up" data-delay="100">
+                        <div class="project-header">
+                            <div class="project-folder">
+                                <i class="fas fa-folder-open" aria-hidden="true"></i>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/pavan-kalaganda" class="project-link" aria-label="View on GitHub" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-github" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" class="project-link" aria-label="View live demo" target="_blank" rel="noopener noreferrer">
+                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">F1 Data Analytics & ML Dashboard</h3>
+                        <p class="project-desc">
+                            Processed 50,000+ race records and engineered ML features for driver and team performance 
+                            analysis. Developed an interactive Streamlit dashboard that reduced manual analysis effort by 60%.
+                        </p>
+                        <div class="project-metrics">
+                            <span class="metric"><i class="fas fa-bullseye" aria-hidden="true"></i> R² = 0.90</span>
+                            <span class="metric"><i class="fas fa-database" aria-hidden="true"></i> 50K+ Records</span>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Scikit-learn</span>
+                            <span class="tech-tag">PCA</span>
+                            <span class="tech-tag">Streamlit</span>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: Numerical Search Engine -->
+                    <article class="project-card" data-animate="fade-up" data-delay="200">
+                        <div class="project-header">
+                            <div class="project-folder">
+                                <i class="fas fa-folder-open" aria-hidden="true"></i>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/pavan-kalaganda" class="project-link" aria-label="View on GitHub" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-github" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" class="project-link" aria-label="View live demo" target="_blank" rel="noopener noreferrer">
+                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Numerical Search Engine over Wikipedia</h3>
+                        <p class="project-desc">
+                            Built a numerical information retrieval system leveraging BIO tagging and Transformer-based models. 
+                            Implemented hybrid BM25 + BERT reranking pipeline via Elasticsearch for structured numerical queries.
+                        </p>
+                        <div class="project-metrics">
+                            <span class="metric"><i class="fas fa-search" aria-hidden="true"></i> Hybrid Search</span>
+                            <span class="metric"><i class="fas fa-link" aria-hidden="true"></i> Wikidata Linked</span>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Elasticsearch</span>
+                            <span class="tech-tag">BERT</span>
+                            <span class="tech-tag">HuggingFace</span>
+                            <span class="tech-tag">Wikidata</span>
+                        </div>
+                    </article>
+
+                    <!-- Project 4: Song Genre Prediction -->
+                    <article class="project-card" data-animate="fade-up" data-delay="300">
+                        <div class="project-header">
+                            <div class="project-folder">
+                                <i class="fas fa-folder-open" aria-hidden="true"></i>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/pavan-kalaganda" class="project-link" aria-label="View on GitHub" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-github" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" class="project-link" aria-label="View live demo" target="_blank" rel="noopener noreferrer">
+                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Song Genre Prediction</h3>
+                        <p class="project-desc">
+                            Developed a genre classification model using audio features (tempo, energy, loudness) from song metadata. 
+                            Applied feature engineering and preprocessing; evaluated with accuracy and macro F1-score metrics.
+                        </p>
+                        <div class="project-metrics">
+                            <span class="metric"><i class="fas fa-music" aria-hidden="true"></i> Audio Features</span>
+                            <span class="metric"><i class="fas fa-balance-scale" aria-hidden="true"></i> F1-Score Optimized</span>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Scikit-learn</span>
+                            <span class="tech-tag">Logistic Regression</span>
+                            <span class="tech-tag">Random Forest</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="section education" id="education" aria-labelledby="education-heading">
+            <div class="container">
+                <div class="section-header" data-animate="fade-up">
+                    <span class="section-tag">05. Education & Coursework</span>
+                    <h2 id="education-heading" class="section-title">Academic Background</h2>
+                </div>
+
+                <div class="education-grid">
+                    <div class="education-card main-education" data-animate="fade-up">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                        </div>
+                        <div class="education-content">
+                            <h3>Bachelor of Technology</h3>
+                            <p class="education-degree">Data Science and Engineering</p>
+                            <p class="education-school">Indian Institute of Technology, Palakkad</p>
+                            <div class="education-meta">
+                                <span class="education-date"><i class="fas fa-calendar" aria-hidden="true"></i> Aug 2023 – May 2027</span>
+                                <span class="education-gpa"><i class="fas fa-star" aria-hidden="true"></i> CGPA: 6.0/10</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="coursework-card" data-animate="fade-up" data-delay="100">
+                        <h3><i class="fas fa-book-open" aria-hidden="true"></i> Relevant Coursework</h3>
+                        <div class="coursework-grid">
+                            <div class="course-item">
+                                <i class="fas fa-brain" aria-hidden="true"></i>
+                                <span>Machine Learning</span>
+                            </div>
+                            <div class="course-item">
+                                <i class="fas fa-network-wired" aria-hidden="true"></i>
+                                <span>Deep Learning</span>
+                            </div>
+                            <div class="course-item">
+                                <i class="fas fa-language" aria-hidden="true"></i>
+                                <span>Natural Language Processing</span>
+                            </div>
+                            <div class="course-item">
+                                <i class="fas fa-robot" aria-hidden="true"></i>
+                                <span>Artificial Intelligence</span>
+                            </div>
+                            <div class="course-item">
+                                <i class="fas fa-dice" aria-hidden="true"></i>
+                                <span>Probability & Statistics</span>
+                            </div>
+                            <div class="course-item">
+                                <i class="fas fa-search" aria-hidden="true"></i>
+                                <span>Information Retrieval</span>
+                            </div>
+                            <div class="course-item">
+                                <i class="fas fa-code" aria-hidden="true"></i>
+                                <span>Data Structures & Algorithms</span>
+                            </div>
+                            <div class="course-item">
+                                <i class="fas fa-database" aria-hidden="true"></i>
+                                <span>Big Data</span>
+                            </div>
+                            <div class="course-item">
+                                <i class="fas fa-server" aria-hidden="true"></i>
+                                <span>Database Management Systems</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="achievements-section" data-animate="fade-up">
+                    <h3><i class="fas fa-trophy" aria-hidden="true"></i> Achievements & Awards</h3>
+                    <div class="achievements-grid">
+                        <div class="achievement-card">
+                            <div class="achievement-icon gold">
+                                <i class="fas fa-medal" aria-hidden="true"></i>
+                            </div>
+                            <div class="achievement-content">
+                                <h4>Gold Medal — College General Championship 2026</h4>
+                                <p>Captained IIT Palakkad Powerlifting Team to victory</p>
+                            </div>
+                        </div>
+                        <div class="achievement-card">
+                            <div class="achievement-icon">
+                                <i class="fas fa-dumbbell" aria-hidden="true"></i>
+                            </div>
+                            <div class="achievement-content">
+                                <h4>Inter-IIT Weightlifting Representative</h4>
+                                <p>Selected to compete at the national-level Inter-IIT platform</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GitHub Section -->
+        <section class="section github" id="github" aria-labelledby="github-heading">
+            <div class="container">
+                <div class="section-header" data-animate="fade-up">
+                    <span class="section-tag">06. Open Source</span>
+                    <h2 id="github-heading" class="section-title">GitHub Activity</h2>
+                    <p class="section-subtitle">My coding journey and contributions</p>
+                </div>
+
+                <div class="github-content" data-animate="fade-up">
+                    <div class="github-profile">
+                        <div class="github-avatar">
+                            <i class="fab fa-github" aria-hidden="true"></i>
+                        </div>
+                        <div class="github-info">
+                            <h3>pavan-kalaganda</h3>
+                            <p>Data Science & Engineering Student at IIT Palakkad</p>
+                            <a href="https://github.com/pavan-kalaganda" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github" aria-hidden="true"></i> View Profile
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="github-stats-grid">
+                        <div class="github-stat-card">
+                            <i class="fas fa-code-branch" aria-hidden="true"></i>
+                            <span class="github-stat-number" id="repoCount">—</span>
+                            <span class="github-stat-label">Repositories</span>
+                        </div>
+                        <div class="github-stat-card">
+                            <i class="fas fa-star" aria-hidden="true"></i>
+                            <span class="github-stat-number" id="starCount">—</span>
+                            <span class="github-stat-label">Total Stars</span>
+                        </div>
+                        <div class="github-stat-card">
+                            <i class="fas fa-code" aria-hidden="true"></i>
+                            <span class="github-stat-number">Python</span>
+                            <span class="github-stat-label">Primary Language</span>
+                        </div>
+                        <div class="github-stat-card">
+                            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                            <span class="github-stat-number">2023</span>
+                            <span class="github-stat-label">Active Since</span>
+                        </div>
+                    </div>
+
+                    <div class="github-contribution">
+                        <h4>Contribution Activity</h4>
+                        <img src="https://ghchart.rshah.org/40916c/pavan-kalaganda" alt="GitHub contribution graph for pavan-kalaganda" class="contribution-chart" loading="lazy">
+                    </div>
+
+                    <div class="github-repos" id="githubRepos">
+                        <h4>Featured Repositories</h4>
+                        <div class="repos-grid" id="reposGrid">
+                            <!-- Populated by JavaScript -->
+                            <div class="repo-placeholder">Loading repositories...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resume Download Section -->
+        <section class="section resume" id="resume" aria-labelledby="resume-heading">
+            <div class="container">
+                <div class="resume-card" data-animate="fade-up">
+                    <div class="resume-content">
+                        <div class="resume-icon">
+                            <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                        </div>
+                        <div class="resume-text">
+                            <h2 id="resume-heading">Download My Resume</h2>
+                            <p>Get a comprehensive overview of my skills, projects, and experience in PDF format.</p>
+                        </div>
+                        <a href="./assets/resume.pdf" class="btn btn-primary btn-lg" download aria-label="Download resume PDF">
+                            <i class="fas fa-download" aria-hidden="true"></i> Download CV
+                        </a>
+                    </div>
+                    <div class="resume-preview" aria-hidden="true">
+                        <div class="preview-page">
+                            <div class="preview-header"></div>
+                            <div class="preview-line"></div>
+                            <div class="preview-line short"></div>
+                            <div class="preview-line"></div>
+                            <div class="preview-line"></div>
+                            <div class="preview-line short"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section contact" id="contact" aria-labelledby="contact-heading">
+            <div class="container">
+                <div class="section-header" data-animate="fade-up">
+                    <span class="section-tag">07. Get In Touch</span>
+                    <h2 id="contact-heading" class="section-title">Contact Me</h2>
+                    <p class="section-subtitle">Have a project in mind or want to collaborate? Let's talk.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info" data-animate="fade-right">
+                        <div class="contact-card">
+                            <h3>Contact Information</h3>
+                            <p class="contact-intro">
+                                I'm currently open to internships, research collaborations, and freelance projects 
+                                in Machine Learning, NLP, and Data Engineering.
+                            </p>
+
+                            <div class="contact-items">
+                                <a href="mailto:142301014@smail.iitpkd.ac.in" class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="contact-detail">
+                                        <span class="contact-label">Email</span>
+                                        <span class="contact-value">142301014@smail.iitpkd.ac.in</span>
+                                    </div>
+                                </a>
+
+                                <a href="tel:+919676473214" class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-phone" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="contact-detail">
+                                        <span class="contact-label">Phone</span>
+                                        <span class="contact-value">+91 96764 73214</span>
+                                    </div>
+                                </a>
+
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="contact-detail">
+                                        <span class="contact-label">Location</span>
+                                        <span class="contact-value">IIT Palakkad, Kerala, India</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="contact-social">
+                                <h4>Connect With Me</h4>
+                                <div class="social-links">
+                                    <a href="https://github.com/pavan-kalaganda" class="social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                                        <i class="fab fa-github" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="mailto:142301014@smail.iitpkd.ac.in" class="social-link" aria-label="Email">
+                                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="tel:+919676473214" class="social-link" aria-label="Phone">
+                                        <i class="fas fa-phone" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-wrapper" data-animate="fade-left">
+                        <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                            <h3>Send a Message</h3>
+                            <div class="form-group">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" id="name" name="name" class="form-input" placeholder="Your name" required autocomplete="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" required autocomplete="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" id="subject" name="subject" class="form-input" placeholder="Project inquiry / Collaboration" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea id="message" name="message" class="form-textarea" rows="5" placeholder="Tell me about your project..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">
+                                <i class="fas fa-paper-plane" aria-hidden="true"></i> Send Message
+                            </button>
+                            <p class="form-note">
+                                <i class="fas fa-info-circle" aria-hidden="true"></i> 
+                                Replace <code>YOUR_FORM_ID</code> in the HTML with your Formspree form ID, 
+                                or update the form action to your preferred endpoint.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">
+                        <span class="logo-bracket">&lt;</span>PK<span class="logo-bracket">/&gt;</span>
+                    </a>
+                    <p>Building intelligent systems with data, code, and curiosity.</p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Social</h4>
+                        <ul>
+                            <li><a href="https://github.com/pavan-kalaganda" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                            <li><a href="mailto:142301014@smail.iitpkd.ac.in">Email</a></li>
+                            <li><a href="tel:+919676473214">Phone</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>Designed & Built by Pavan Kalaganda</p>
+                <p>Data Science & Engineering, IIT Palakkad</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="./js/main.js"></script>
+</body>
+</html>
